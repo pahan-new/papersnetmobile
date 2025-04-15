@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>papersnet - Modern Past Papers Repository</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome (for icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="/"><i class="fas fa-book-open"></i> papers<strong>net</strong></a>
+            </div>
+            <nav class="main-nav">
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#papers-section">Papers</a></li>
+                    <li><a href="#contact-section">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-text">
+                    <h1>Unlock Your Potential with Past Papers</h1>
+                    <p class="lead">Access a vast repository of past examination papers instantly.</p>
+                    <a href="#papers-section" class="btn btn-primary btn-lg">Browse Papers Now <i class="fas fa-arrow-down"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="papers-section" class="filter-and-results-section">
+            <div class="container">
+                <aside class="filter-sidebar">
+                    <h2><i class="fas fa-filter"></i> Filter Papers</h2>
+                    <form id="filter-form">
+                        <div class="filter-group">
+                            <label for="year-filter">Year:</label>
+                            <select id="year-filter" name="year">
+                                <option value="">All Years</option>
+                                <!-- Options will be populated by JavaScript -->
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label for="subject-filter">Subject:</label>
+                            <select id="subject-filter" name="subject">
+                                <option value="">All Subjects</option>
+                                <!-- Options will be populated by JavaScript -->
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label for="medium-filter">Medium:</label>
+                            <select id="medium-filter" name="medium">
+                                <option value="">All Mediums</option>
+                                <!-- Options will be populated by JavaScript -->
+                            </select>
+                        </div>
+
+                        <button type="button" class="btn btn-primary apply-filters-btn"><i class="fas fa-check"></i> Apply Filters</button>
+                        <button type="button" class="btn btn-secondary reset-filters-btn"><i class="fas fa-undo"></i> Reset Filters</button>
+                    </form>
+                </aside>
+
+                <section class="results-area">
+                    <h2><i class="fas fa-file-alt"></i> Available Past Papers</h2>
+                    <div id="loading-indicator" class="loading-indicator" style="display: none;">
+                        <i class="fas fa-spinner fa-spin"></i> Loading papers...
+                    </div>
+                    <div id="papers-grid" class="papers-grid">
+                        <!-- Paper cards will be injected here by JavaScript -->
+                        <p class="no-results-message">Please use the filters to find papers.</p>
+                    </div>
+                    <!-- Pagination could go here if needed -->
+                </section>
+            </div>
+        </section>
+        <!-- Add this section within the #contact-section .container -->
+<div class="feedback-form-wrapper">
+    <h3>Send Us Your Feedback</h3>
+    <form id="feedback-form">
+        <div id="feedback-status" class="form-message" style="display: none;"></div> <!-- For success/error messages -->
+
+        <div class="form-group">
+            <label for="feedback-name">Name (Optional)</label>
+            <input type="text" id="feedback-name" name="name" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="feedback-email">Email (Optional)</label>
+            <input type="email" id="feedback-email" name="email" class="form-control">
+            <small>We'll only use this to reply if needed.</small>
+        </div>
+
+        <div class="form-group">
+            <label for="feedback-type">Feedback Type</label>
+            <select id="feedback-type" name="type" class="form-control" required>
+                <option value="" disabled selected>-- Select Type --</option>
+                <option value="suggestion">General Suggestion</option>
+                <option value="bug_report">Bug Report / Issue</option>
+                <option value="paper_request">Paper Request</option>
+                <option value="compliment">Compliment</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="feedback-message">Your Feedback</label>
+            <textarea id="feedback-message" name="message" rows="5" class="form-control" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary submit-feedback-btn">
+            <i class="fas fa-paper-plane"></i> Send Feedback
+        </button>
+    </form>
+</div>
+<!-- End of feedback form section -->
+
+        <section id="contact-section" class="contact-us-section">
+            <div class="container">
+                <h2>Get In Touch</h2>
+                <p class="lead">Have questions, suggestions, or need help? Reach out!</p>
+                <div class="contact-info">
+                     <p><i class="fas fa-envelope"></i> Email: <a href="mailto:info@papersnet.lk">info@papersnet.lk</a></p>
+                     <p><i class="fas fa-info-circle"></i> We typically respond within 24-48 hours.</p>
+                     <!-- Add more contact methods if available -->
+                     <!-- <p><i class="fab fa-whatsapp"></i> WhatsApp: <a href="tel:+94XXXXXXXXX">+94 XX XXX XXXX</a></p> -->
+                </div>
+                <!-- Optional: Add a simple contact form here -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>© <span id="copyright-year"></span> papersnet. All rights reserved.</p>
+            <!-- Optional: Add social media links or other footer content -->
+        </div>
+    </footer>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>
