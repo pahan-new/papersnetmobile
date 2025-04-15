@@ -14,34 +14,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="main-header">
-        <div class="container">
-            <div class="logo">
-                <a href="/"><i class="fas fa-book-open"></i> papers<strong>net</strong></a>
-            </div>
-            <nav class="main-nav">
-                <button class="nav-toggle" aria-label="Toggle navigation">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#papers-section">Papers</a></li>
-                    <li><a href="#contact-section">Contact Us</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main class="main-content">
-        <section class="hero-section">
-            <div class="container">
-                <div class="hero-text">
-                    <h1>Unlock Your Potential with Past Papers</h1>
-                    <p class="lead">Access a vast repository of past examination papers instantly.</p>
-                    <a href="#papers-section" class="btn btn-primary btn-lg">Browse Papers Now <i class="fas fa-arrow-down"></i></a>
-                </div>
-            </div>
-        </section>
+   
 
         <section id="papers-section" class="filter-and-results-section">
             <div class="container">
@@ -91,67 +64,6 @@
             </div>
         </section>
         <!-- Add this section within the #contact-section .container -->
-<div class="feedback-form-wrapper">
-    <h3>Send Us Your Feedback</h3>
-    <form id="feedback-form">
-        <div id="feedback-status" class="form-message" style="display: none;"></div> <!-- For success/error messages -->
-
-        <div class="form-group">
-            <label for="feedback-name">Name (Optional)</label>
-            <input type="text" id="feedback-name" name="name" class="form-control">
-        </div>
-
-        <div class="form-group">
-            <label for="feedback-email">Email (Optional)</label>
-            <input type="email" id="feedback-email" name="email" class="form-control">
-            <small>We'll only use this to reply if needed.</small>
-        </div>
-
-        <div class="form-group">
-            <label for="feedback-type">Feedback Type</label>
-            <select id="feedback-type" name="type" class="form-control" required>
-                <option value="" disabled selected>-- Select Type --</option>
-                <option value="suggestion">General Suggestion</option>
-                <option value="bug_report">Bug Report / Issue</option>
-                <option value="paper_request">Paper Request</option>
-                <option value="compliment">Compliment</option>
-                <option value="other">Other</option>
-            </select>
-        </div>
-
-        <div class="form-group">
-            <label for="feedback-message">Your Feedback</label>
-            <textarea id="feedback-message" name="message" rows="5" class="form-control" required></textarea>
-        </div>
-
-        <button type="submit" class="btn btn-primary submit-feedback-btn">
-            <i class="fas fa-paper-plane"></i> Send Feedback
-        </button>
-    </form>
-</div>
-<!-- End of feedback form section -->
-
-        <section id="contact-section" class="contact-us-section">
-            <div class="container">
-                <h2>Get In Touch</h2>
-                <p class="lead">Have questions, suggestions, or need help? Reach out!</p>
-                <div class="contact-info">
-                     <p><i class="fas fa-envelope"></i> Email: <a href="mailto:info@papersnet.lk">info@papersnet.lk</a></p>
-                     <p><i class="fas fa-info-circle"></i> We typically respond within 24-48 hours.</p>
-                     <!-- Add more contact methods if available -->
-                     <!-- <p><i class="fab fa-whatsapp"></i> WhatsApp: <a href="tel:+94XXXXXXXXX">+94 XX XXX XXXX</a></p> -->
-                </div>
-                <!-- Optional: Add a simple contact form here -->
-            </div>
-        </section>
-    </main>
-
-    <footer class="main-footer">
-        <div class="container">
-            <p>© <span id="copyright-year"></span> papersnet. All rights reserved.</p>
-            <!-- Optional: Add social media links or other footer content -->
-        </div>
-    </footer>
 
     <!-- JavaScript File -->
     <script src="script.js"></script>
